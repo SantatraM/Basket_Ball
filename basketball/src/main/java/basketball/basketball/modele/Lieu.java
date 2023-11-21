@@ -9,4 +9,18 @@ import jakarta.persistence.Id;
 public class Lieu{
     String idLieu;
     String lieu;
+    
+    public String getLieu() {
+        return lieu;
+    }
+    public void setLieu(String lieu) {
+        this.lieu = lieu;
+    }
+    public String getIdLieu() {
+        return idLieu;
+    }
+    public void setIdLieu(String idLieu) {
+        this.idLieu = idLieu;
+    }
+    
 }

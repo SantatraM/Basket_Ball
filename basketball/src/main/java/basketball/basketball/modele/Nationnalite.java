@@ -9,4 +9,19 @@ import jakarta.persistence.Id;
 public class Nationnalite {
     String idNationnalite;
     String libelle;
+    
+    public String getLibelle() {
+        return libelle;
+    }
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+    
+    public String getIdNationnalite() {
+        return idNationnalite;
+    }
+    public void setIdNationnalite(String idNationnalite) {
+        this.idNationnalite = idNationnalite;
+    }
+    
 }
