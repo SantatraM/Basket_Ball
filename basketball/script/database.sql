@@ -20,7 +20,7 @@ create sequence seqLieu;
 create table Lieu(
     idLieu varchar(20) default concat('LIE' || nextval('seqNationnalite')) primary key,
     libelle varchar(30)
-)
+);
 
 -- Saison
 create sequence seqSaison;
@@ -35,7 +35,7 @@ create sequence seqPoste;
 create table Poste(
     idPoste varchar(20) default concat('POS' || nextval('seqPoste')) primary key,
     libelle varchar(20)
-) 
+);
 
 -- Equipe
 create sequence seqEquipe;
@@ -107,7 +107,7 @@ create table Action(
     valeur int,
     foreign key (idCarton) references Carton(idCarton),
     foreign key (idJoueur) references Joueur(idJoueur),
-    foreign key (idTypeAction) references TypeAction(idTypeAction),
+    foreign key (idTypeAction) references TypeAction(idTypeAction)
 );  
 
 -- Mouvement Joueur Match
@@ -119,7 +119,7 @@ create table MouvementJoueurMatch(
     dateHeureEntree timestamp,
     dateHeureSortie timestamp,
     foreign key (idMatch) references Match(idMatch),   
-    foreign key (idJoueur) references Joueur(idJoueur),
+    foreign key (idJoueur) references Joueur(idJoueur)
 );
 
 
