@@ -1,6 +1,4 @@
-package main.java.basketball.basketball.modele;
-
-import basketball.basketball.modele.Joueur;
+package   
 
 import jakarta.persistence.*;
 
@@ -8,7 +6,7 @@ public class PosteJoueur {
     String idPosteJoueur;
 
     @OneToOne
-    @JoinColumn(name = "idmatch")
+    @JoinColumn(name = "Match")
     Match match;
 
     @OneToOne
@@ -42,14 +40,6 @@ public class PosteJoueur {
 
     public void setPoste(Poste poste) {
         this.poste = poste;
-    }
-
-    public String getIdMatch() {
-        return idMatch;
-    }
-
-    public void setIdMatch(String idMatch) {
-        this.idMatch = idMatch;
     }
 
     public String getIdPosteJoueur() {

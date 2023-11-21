@@ -1,4 +1,4 @@
-package basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Nationnalite {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idNationnalite;
     String libelle;
     

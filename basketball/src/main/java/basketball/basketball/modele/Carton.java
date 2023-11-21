@@ -1,4 +1,4 @@
-package main.java.basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
 
 import java.security.Timestamp;
 
@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Carton {
     String idCarton;
 
-    @OnteToOne
+    @OneToMany
     @JoinColumn(name = "idmatch")
     Match match;
 

@@ -1,4 +1,4 @@
-package basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
 
 import java.security.Timestamp;
 
@@ -6,15 +6,33 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+
 
 @Entity
 public class Match {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idMatch;
+
+    @OneToMany
+    @JoinColumn(name = "idEquipe1")
     Equipe equipe1;
+
+    @OneToMany
+    @JoinColumn(name = "idEquipe2")
     Equipe equipe2;
     Timestamp dateHeureDebut;
     Timestamp dateHeureFin;
+
+    @OneToMany
+    @JoinColumn(name = "idLieu")
     Lieu lieu;
+
+    @OneToMany
+    @JoinColumn(name = "idSaison")
     Saison saison;
 
     public Equipe getEquipe2() {

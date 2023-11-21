@@ -1,8 +1,7 @@
 package main.java.basketball.basketball.modele;
 
 import java.security.Timestamp;
-
-import basketball.basketball.modele.Joueur;
+import jakarta.persistence.*;
 
 public class Action {
     String idAction;
