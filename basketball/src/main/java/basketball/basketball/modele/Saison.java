@@ -1,4 +1,6 @@
-package basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
+
+import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

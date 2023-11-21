@@ -1,4 +1,4 @@
-package basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
 
 import java.security.Timestamp;
 
@@ -31,7 +31,7 @@ public class Match {
     @JoinColumn(name = "idLieu")
     Lieu lieu;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "idSaison")
     Saison saison;
 

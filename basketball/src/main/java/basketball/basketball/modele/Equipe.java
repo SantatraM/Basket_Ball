@@ -1,10 +1,11 @@
-package basketball.basketball.modele;
+package  main.java.basketball.basketball.modele;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.JoinColumn;
 
 @Entity
@@ -14,7 +15,8 @@ public class Equipe {
     String idEquipe;
     String nomEquipe;
 
-
+    @OneToMany
+    @JoinColumn(name = "idnationnalite")
     Nationnalite nationnalite;
 
 
