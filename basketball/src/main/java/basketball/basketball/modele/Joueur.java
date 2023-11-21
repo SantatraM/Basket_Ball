@@ -4,15 +4,27 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+
 
 @Entity
 public class Joueur {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idJoueur;
     String nomJoueur;
     String prenomJoueur;
     String adresse;
     float taille;
     float poids;
+
+    @OneToMany
+    @JoinColumn(name = "idEquipe")
+    Equipe equipe;
+
+    @OneToMany
+    @JoinColumn(name = "idNationnalite")
     Nationnalite nationnalite;
 
     public String getIdJoueur() {

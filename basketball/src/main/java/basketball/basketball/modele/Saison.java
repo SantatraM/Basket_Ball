@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Saison {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idSaison;
     Date dateDebut;
     String nomSaison;

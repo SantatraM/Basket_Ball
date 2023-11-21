@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Lieu{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idLieu;
     String lieu;
     

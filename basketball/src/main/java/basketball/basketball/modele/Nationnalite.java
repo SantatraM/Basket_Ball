@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Nationnalite {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idNationnalite;
     String libelle;
     
