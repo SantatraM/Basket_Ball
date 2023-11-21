@@ -10,7 +10,7 @@ import basketball.basketball.modele.Equipe;
 import basketball.basketball.modele.Joueur;
 
 @Repository
-public interface EquipeRepository extends JpaRepository<>{
+public interface EquipeRepository extends JpaRepository{
     List<Equipe> findAllEquipe;
 
     Optional<Joueur> findJoueurByIdEquipe(String idEquipe);
