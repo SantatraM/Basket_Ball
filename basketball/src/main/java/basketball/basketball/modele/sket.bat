@@ -1,1 +1,0 @@
-javac -d E:\Lesona\S5\Mobile\Basket_Ball_Server\basketball\build *.java
